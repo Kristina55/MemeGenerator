@@ -1,0 +1,118 @@
+
+
+
+/* Form section */
+
+
+.formSection {
+    height: 430px;
+    background-color: #bee1e2;
+}
+
+
+.myH1Style{
+
+    margin-top: 65px;
+    text-align: center;
+    font-family: PT Serif,serif;
+    color: #607d8b;
+
+}
+
+.myPstyle {
+
+    font-size: 20px;
+    margin-bottom: 55px;
+    text-align: center;
+    font-family: PT Serif,serif;
+    color: #779aab;
+
+}
+.buttonRight{
+    text-align:right;
+}
+.myButton{
+    font-size: 15px;
+    color: white;
+    border-radius: 6px;
+    background-color: #237b7b;
+    border: 1px solid #607D8B;
+    padding: 7px;
+    cursor: pointer;
+    font-family: PT Serif,serif;
+}
+
+.myLabelStyle {
+    font-family: PT Serif,serif;
+    color: #007e7d;
+    padding-left: 30px !important;
+}
+
+.form-control:focus {
+    
+    border-color: #FF9800 !important;
+    box-shadow: 0 0 0 0.2rem #FF9800 !important;
+   
+}
+
+/* Images section */
+
+.imgSection {
+    height: 410px;
+}
+.margin_top{
+    margin-top: 25px;
+}
+
+.imgAlign {
+    text-align: center;
+    position: relative;
+}
+.visibilityImg {
+    visibility: hidden;
+}
+.topTextStyle {
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    left: 77px;
+}
+
+.bottomTextStyle{
+    visibility: hidden;
+    position: absolute;
+    left: 77px;
+    bottom:95px;
+}
+.bottomSecondTextStyle {
+    visibility: hidden;
+    position: absolute;
+    left: 77px;
+    bottom:95px;
+}
+.marginTop {
+    margin-top: 20px;
+
+}
+
+.styleMyText {
+    font-family: PT Serif,serif;
+    padding: 3px;
+    color: white;
+    font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: #00000059;
+}
+
+.styleDeleteButton {
+    font-size: 15px;
+    color: white;
+    border-radius: 6px;
+    background-color: #237b7b;
+    border: 1px solid #607D8B;
+    padding: 7px;
+    cursor: pointer;
+    font-family: PT Serif,serif;
+    visibility: hidden;
+}
+

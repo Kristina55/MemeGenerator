@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<title>Kristina's meme generator</title>
+</head>
+<body>
+
+<!-- Form Section -->
+
+<div class="formSection">
+        <div class="container-fluid">
+                <div class="row">
+                        <div class="col-sm-12">
+                            <h1 class="myH1Style">CREATE YOUR MEME!</h1>
+                         <h2 class="myPstyle"> Fill out the form to start creating memes!</h2>
+                        </div> 
+                </div>
+        </div>  
+        
+        
+
+        <div class="container-fluid">
+        <form id="formId" >
+                <div class="form-group row">
+                  <label for="memeImage" class="myLabelStyle col-sm-2 col-form-label">Image URL</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="imgName"id="memeImage" placeholder="Place the URL for your meme image!">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="topText" class="myLabelStyle col-sm-2 col-form-label">Text on Top</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="topName" id="topText" placeholder="Place the text for the top of your meme!">
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="bottomText" class="myLabelStyle col-sm-2 col-form-label">Text on Bottom</label>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" name="bottomName" id="bottomText" placeholder="Place the text for the bottom of your meme!">
+                    </div>      
+                </div>
+                <div class="form-group row">
+
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-5"> </div>
+                    <div class="buttonRight col-sm-2">
+                         <input type="submit"  class="myButton" id="myButton" value="Create Meme">
+                    </div>
+                        
+                 </div>
+         </form>
+         </div>
+</div>
+
+
+<!-- Image Section -->
+
+
+<div class="imgSection">
+        <div class="container-fluid">
+                <div class="margin_top row">
+                  
+                        <div class="imgAlign col-sm-4" id="firstDiv">
+                                <div id="firstImg" class="visibilityImg"><img src="" id="theActualImg"alt="..." class="img-thumbnail"></div>
+                                <div id="topDiv" class="topTextStyle"><p class="styleMyText">Text Top</p></div>
+                                <div id="bottomDiv" class="bottomTextStyle"><p class="styleMyText">Text Bottom</p></div>
+                                <input type="button" id="firstDeleteButton" class="marginTop styleDeleteButton" value="Delete Meme"> 
+                                
+                        </div>
+              
+                        <div class="imgAlign col-sm-4" id="secondDiv">
+                                <div id="secondImg" class="visibilityImg"><img src="" id="theActualImg1" alt="..." class="img-thumbnail"></div>
+                                <div id="secondTopDiv" class="topTextStyle"><p class="styleMyText">Text Top</p></div>
+                                <div id="secondBottomDiv" class="bottomSecondTextStyle"><p class="styleMyText">Text Bottom</p></div>
+                                <input type="button"  id="secondDeleteButton" class="marginTop styleDeleteButton" value="Delete Meme"> 
+                        </div>
+                     
+                    
+                </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+var form = document.getElementById("formId");
+
+     form.onsubmit = function(e){
+     e.preventDefault();
+     
+     var url = document.getElementById("memeImage").value;
+     document.getElementById('firstImg').style.visibility = "visible";
+     document.getElementById('theActualImg').setAttribute('src',url)
+     document.getElementById('firstDeleteButton').style.visibility = "visible";
+     img1_shown = true;
+
+   
+     var div1 = document.getElementById('topDiv');
+     document.getElementById('topDiv').style.visibility = "visible";
+     document.getElementById('topDiv').classList.add("styleMyText")
+     var div2 = document.getElementById('bottomDiv');
+     document.getElementById('bottomDiv').style.visibility = "visible";
+     document.getElementById('bottomDiv').classList.add("styleMyText")
+     div1.innerHTML = form.topName.value;
+     div2.innerHTML = form.bottomName.value;
+     form.reset(); 
+
+
+     form.onsubmit = function(e){
+     e.preventDefault();
+     
+     var url1 = document.getElementById("memeImage").value;
+     document.getElementById('secondImg').style.visibility = "visible";
+     document.getElementById('theActualImg1').setAttribute('src',url1)
+     document.getElementById('secondDeleteButton').style.visibility = "visible";
+
+     var div3 = document.getElementById('secondTopDiv');
+     document.getElementById('secondTopDiv').style.visibility = "visible";
+     document.getElementById('secondTopDiv').classList.add("styleMyText")
+     var div4 = document.getElementById('secondBottomDiv');
+     document.getElementById('secondBottomDiv').style.visibility = "visible";
+     document.getElementById('secondBottomDiv').classList.add("styleMyText")
+     div3.innerHTML = form.topName.value;
+     div4.innerHTML = form.bottomName.value;
+
+     form.reset(); 
+    }
+}
+
+document.getElementById("firstDeleteButton").addEventListener("click", myFunction)
+
+function myFunction(){
+
+var removeImageDiv = document.getElementById("firstDiv");
+removeImageDiv.parentNode.removeChild(removeImageDiv);
+
+}
+
+document.getElementById("secondDeleteButton").addEventListener("click", mySecondFunction)
+
+function mySecondFunction(){
+
+var removeSecondImageDiv = document.getElementById("secondDiv");
+removeSecondImageDiv.parentNode.removeChild(removeSecondImageDiv);
+
+}
+
+</script>
+
+</body>
+</html>
